@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Reviews Page">
+    <meta name="author" content="Sukhpal Nijjar">
+
+    <title>EcoCar - Reviews </title>
+
+    	<!-- Small logo in tab menu -->
+	<link href="images/icon.png" rel="icon">
+</link>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/ecocar.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" width="20%">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="login.html" id="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-danger" onclick="logOut()" id="logout">Log Out</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Reviews</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Reviews</li>
+        </ol>
+
+        <!-- Intro Content -->
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="img-fluid rounded mb-4" src="images/330e.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <h2>Our pick...</h2>
+                <p><a href="https://discover.bmw.co.uk/campaigns/330e-launch"><b>The BMW 330e Plug-in Hybrid</b></a></p>
+                <p>The combination of BMW’s electric motor and the TwinPower Turbo 4-cylinder petrol engine puts the BMW 330e Plug-in Hybrid in a league of its own. Offering a combined range of 372 miles and a 0 to 62mph acceleration of just 6.5 seconds – it’s time to rediscover The Ultimate Driving Machine as a plug-in hybrid (PHEV).</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Team Members -->
+        <h2>In the spotlight...</h2>
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 text-center">
+                    <img class="card-img-top" src="images/cooper.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Mini Countryman PHEV</h4>
+                        <p class="card-text">The MINI Countryman Plug-in Hybrid is powered by both a combustion engine and electric motor. So you can experience an electrifying combination, the spirit of an explorer with technology at its heart.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.mini.co.uk/en_GB/home/range/mini-plug-in-hybrid.html">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 text-center">
+                    <img class="card-img-top" src="images/outlander.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Mitsubishi Outlander PHEV</h4>
+                        <p class="card-text">The Outlander PHEV is the world's most successful Plug-in Hybrid EV. Thanks to advanced technology it offers a driving experience like no other. It’s responsive and powerful, yet ultra-efficient and smooth in a way that demands to be experienced.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.mitsubishi-motors.co.uk/cars/outlander-phev?utm_source=google&utm_medium=ppc&utm_campaign=outlander_phev_paidsearch_fy19&utm_source=google&utm_medium=ppc&utm_campaign=missingDim&gclid=Cj0KCQiAsvTxBRDkARIsAH4W_j-aoL2AmvvdHTaaD2z-uZ20nUVtfc_iCqmpX5FKR4pDuM45phWCLCkaApApEALw_wcB">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 text-center">
+                    <img class="card-img-top" src="images/cx30.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Mazda CX30 Skyactiv-X</h4>
+                        <p class="card-text">Skyactiv-X is an engine that changes everything. Our pioneering engineers succeeded where others failed. It makes more power but produces fewer emissions and uses less fuel than a regular petrol engine for an even better drive without compromise.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.mazda.co.uk/cars/mazda-cx-30/">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; EcoCar 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/login.js"></script>	
+
+</body>
+
+</html>

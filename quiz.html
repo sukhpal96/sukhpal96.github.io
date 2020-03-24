@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="EcoCar Home Page">
+    <meta name="author" content="Sukhpal Nijjar">
+
+    <title>EcoCar - Quiz</title>
+
+    		<!-- Small logo in tab menu -->
+		<link href="images/icon.png" rel="icon">
+  </link>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+	<!-- Custom CSS -->
+	<link href="css/ecocar.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" width="20%">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="login.html" id="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <button class="btn btn-danger" onclick="logOut()" id="logout">Log Out</button>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page journey in taskbar -->
+        <h1 class="mt-4 mb-3">EcoCar Quiz
+      <small>Current car...</small>
+    </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Quiz</li>
+        </ol>
+
+        <div class="alert alert-danger" role="alert" id="errormessage">
+          Error! Registration invalid, please try again.
+          </div>
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Bringing the div box in proportion with the above -->
+            <div class="col-lg-12 mb-4">
+
+                <div class="row">
+					<!-- Numberplate CSS class used to design the plate --> 
+                    <label for="inputEmail3" class="col-sm-4 col-form-label"><b>Current numberplate:</b></label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control number_plate" id="reg_number" placeholder="e.g. AA11 ABC">
+                    </div>
+                    <div class="col-sm-4">
+					<!-- Obtaining the Javascript file 'findMyCar' when clicked -->
+                        <button id="find_my_car" onclick="findMyCar()" class="btn btn-dark">Find my car</button>
+                    </div>
+					<div class="col-sm-12 pt-3">
+					<table class="table table-striped">
+					  <tbody>
+					    <!-- Registration -->
+						<tr>
+						  <th scope="row">Registration</th>
+						  <td>
+							<span id="registration_number"> </span>
+						  </td>
+						</tr>
+						
+						<!-- CO2 Emissions -->
+						<tr>
+						  <th scope="row">CO2 Emissions</th>
+						  <td>
+						  	<span id="co2_figure"> </span>
+						  </td>
+						</tr>
+						
+						<!-- Make  -->
+						<tr>
+						  <th scope="row">Make</th>
+						  <td>
+						  	<span id="make"> </span>
+						  </td>
+						</tr>
+						
+						<!-- Colour -->
+						<tr>
+						  <th scope="row">Colour</th>
+						  <td>
+						  	<span id="colour"> </span>
+						  </td>
+						</tr>
+						
+						<!-- Year of Manufacture -->
+						<tr>
+						  <th scope="row">Year of Manufacture</th>
+						  <td>
+						  	<span id="year"> </span>
+						  </td>
+						</tr>
+						
+						<!-- Fuel Type -->
+						<tr>
+						  <th scope="row">Fuel Type</th>
+						  <td>
+						  	<span id="fuel"> </span>
+						  </td>
+						</tr>
+						
+						<!-- Engine size -->
+						<tr>
+						  <th scope="row">Engine Capacity</th>
+						  <td>
+						  	<span id="enginesize"> </span>
+						  </td>
+						</tr>
+						
+						<!-- Axel Type -->
+						<tr>
+						  <th scope="row">Axle Type</th>
+						  <td>
+						  	<span id="axle"> </span>
+						  </td>
+						</tr>
+						
+					  </tbody>
+					</table>
+					</div>
+					<div class="col-sm-12">
+					<a href="/quiz_more.html" class = "btn btn-primary float-right" id="findMyCarBTN" hidden>Find my new car!</a>
+					</div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; EcoCar 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>	
+    <script src="js/jqBootstrapValidation.js"></script>
+
+  <!-- Temporary storage of cars whilst database is not set up -->
+	<script src="js/data.js"></script>
+
+	<!-- Custom Javascript file -->
+	<script src="js/quiz.js"></script>
+	
+	<script src="js/login.js"></script>	
+
+</body>
+
+</html>

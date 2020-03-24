@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="EcoCar Home Page">
+    <meta name="author" content="Sukhpal Nijjar">
+
+    <title>EcoCar - Login</title>
+    <link href="images/icon.png" rel="icon"></link>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/ecocar.css" rel="stylesheet">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>EcoCar</title>
+        <link href="images/icon.png" rel="icon">
+        </link>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/modern-business.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" width="20%">
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.html">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="login.html" id="login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-danger" onclick="logOut()" id="logout">Log Out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center mt-4">
+            <div class="row"> 
+                <div class="offset-3 col-6 row">
+                    <div class="col-12 mb-3">
+                        <b>Account Login</b> 
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Requesting the login details from the user -->
+                            <label for="email" class="col-4 col-form-label"><b>Email Address:</b></label>
+                            <div class="col-8">
+                                <!-- Taking in the email address that has been inputted-->
+                                <input type="email" class="form-control" id="email" placeholder="e.g. mr.smith@ecocar.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-2">
+                        <div class="row">
+                            <!-- Requesting the login details from the user -->
+                            <label for="password" class="col-4 col-form-label"><b>Password:</b></label>
+                            <div class="col-8">
+                                <!-- Taking in the password that has been inputted-->
+                                <input type="password" class="form-control" id="password" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creating the login button-->
+                    <div class="offset-9 col-3 mt-2">
+                        <button class="btn btn-primary btn-block" onclick="logMeIn()">
+                            Login
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" width="20%">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="js/login.js"></script>	
+
+</body>
+
+</html>

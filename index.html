@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="EcoCar Home Page">
+    <meta name="author" content="Sukhpal Nijjar">
+    <title>EcoCar</title>
+    
+	<!-- Small logo in tab menu -->
+	<link href="images/icon.png" rel="icon">
+    </link>
+    <!-- Bootstrap core CSS, to style the website -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS for EcoCar  -->
+    <link href="css/ecocar.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" width="21%">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="login.html" id="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-danger" onclick="logOut()" id="logout">Log Out</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+				<!--  Carousel to slide pictures on index homepage -->
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3500">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Background image and text -->
+                <div class="carousel-item active" style="background-image: url('images/airpoll1.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3><b>Air Pollution</b></h3>
+                        <p>Did you know air pollution accounts for <b>4.6 million</b> deaths a year?</p>
+                    </div>
+                </div>
+                <!-- Slide Two - Background image and text -->
+                <div class="carousel-item" style="background-image: url('images/rr.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3></b>Plug-in hybrid technology</b></h3>
+                        <p>Did you know there were approximately <b>265,000</b> plug-in cars registered in the UK in January 2019?</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Background image and text -->
+                <div class="carousel-item" style="background-image: url('images/charging.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Government Grants</h3>
+                        <p>Did you know that the UK Government offer incentives for driving greener vehicles on the UK roads?</p>
+                    </div>
+                </div>
+            </div>
+			<!--  Buttoms to move images back and forwards -->
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Recommendation Tool -->
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <h2><b>Your next car</b></h2>
+                <p>Take the quiz today to find your perfect car.</p>
+                <p> With various factors affecting your pocket and the atmosphere, why don't you use our recommendation tool to see if your next car could be eco-friendlier?</p>
+				<p> Advantages include:</p>
+                <ul>
+                    <li>Less CO2 emissions</li>
+                    <li>Lower running costs</li>
+                    <li>Attractive Government schemes to help with running costs </li>
+                    <li><b>Join the future!</b></li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="images/quizpic.jpg" alt="quizpic">
+            </div>
+        </div>
+
+          <!-- /.row -->
+          <hr>
+
+        <!-- Take the quiz section  -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <p></p>
+                <p>It won't take long to find your perfect car! <b>Try it now...</b></p>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-secondary btn-block" href="quiz.html">Take the quiz</a>
+            </div>
+        </div>
+                <!-- /.row -->
+                <hr>
+        <!-- Highlighted models on index page -->
+        <h2>Highlighted models</h2>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="post-tesla.html"><img class="card-img-top" src="images/tesla.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        <a href="post-tesla.html"><center>Tesla Model X</center></a>
+                     </h4>
+                        <p class="card-text">Model X has the most storage room of any SUV in its class, comfortable seating for up to seven adults and the capability to tow up to 2,250 kg. Falcon Wing doors are equipped with sensors to monitor the proximity of surroundings, and can open in even the tightest parking spaces. A spoiler provides incredible aerodynamics and the lowest drag coefficient of any vehicle in its class.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card border-dark h-100">
+                    <a href="post-i3s.html"><img class="card-img-top" src="images/i3s.jpg" alt=""></a>
+                    <div class="card-body text-dark" style="background-color:#EFEFEF">
+                        <h4 class="card-title">
+                        <a href="post-i3s.html"><center><b>BMW i3</b></center></a>
+                     </h4>
+                     <p class="card text"><center><b>Auto Express Award Winner 2017</b></center></p>
+                        <p class="card-text">Electric driving is here to stay. Join the thousands of drivers who enjoy the revolutionary performance and savings of the BMW i3. With zero driving emissions, an all-electric range of up to 193 miles, over 14,000 UK charging stations, and annual fuel savings of up to £1,342 versus a petrol car, isn’t it time you went electric?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="post-prius.html"><img class="card-img-top" src="images/prius.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        <a href="post-prius.html"><center>Toyota Prius</center></a>
+                     </h4>
+                        <p class="card-text">The 2020 Toyota Prius offers ample cargo space for both your impromptu adventures and planned itineraries. If up to 65.5 cu. ft. of space with the seats folded isn’t enough to hold all your gear, cargo cross bars are available for support. And with its available AWDe, Prius helps you go where your whim leads. Every Prius model is equipped with Toyota Safety Sense™ P (TSS-P), 67 an advanced suite of safety technologies to help you drive with confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+                    <!-- Useful Tools section -->
+                    <!-- Pictures: https://cdn5.vectorstock.com/i/1000x1000/97/94/car-insurance-services-icon-set-vector-18759794.jpg-->
+                   
+                    <h2>Useful Tools</h2>
+                  <!-- Useful tools setting the pictures with the links working in them-->
+                    <div class="row mt-2">
+                        <!-- Setting the alignment-->
+                        <div class="offset-lg-1 col-lg-2 col-sm-4 mb-4 text-center">
+                            <!-- Adding in the picture link-->
+                            <a href="https://www.gocompare.com/" target="_blank">
+                                <!-- Obtaining the picture and adjusting it to a set height-->
+                                <img class="img-fluid" height="64px" src="images/insurance.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.hpi.co.uk/" target="_blank">
+                                <img class="img-fluid"  height="64px"src="images/hpi.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.webuyanycar.com/" target="_blank">
+                                <img class="img-fluid" height="64px" src="images/wbac.png" alt="">
+                                </a>
+                        </div>
+                        <div class="col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.moneysupermarket.com/loans/car-finance/" target="_blank">
+                                <img class="img-fluid" height="64px" src="images/finance.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.autotrader.co.uk/car-valuation" target="_blank">
+                                <img class="img-fluid" height="64px" src="images/value.png" alt="">
+                            </a>
+                        </div>
+
+                        <!-- Text beneath images aligned and links added -->
+                        <div class="offset-lg-1 col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.gocompare.com/" target="_blank">
+                            Car Insurance</a>
+                        </div>
+                        <div class="col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.hpi.co.uk/" target="_blank">
+                            Car check</a>
+                        </div>
+                        <div class="col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.webuyanycar.com/" target="_blank">
+                            Sell my car</a>
+                        </div>
+                        <div class="col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.moneysupermarket.com/loans/car-finance/" target="_blank">
+                            Car Finance</a>
+                        </div>
+                        <div class="col-lg-2 col-sm-4 mb-4 text-center">
+                            <a href="https://www.autotrader.co.uk/car-valuation" target="_blank">
+                            Value my car</a>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+
+            
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; EcoCar 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Supporting Javascript for the webpage -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
+    <script src="js/login.js"></script>	
+
+</body>
+
+</html>

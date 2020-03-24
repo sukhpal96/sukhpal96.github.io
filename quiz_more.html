@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Additional Quiz Page">
+    <meta name="author" content="Sukhpal Nijjar">
+
+    <title>EcoCar - Quiz</title>
+
+		<!-- Small logo in tab menu -->
+		<link href="images/icon.png" rel="icon">
+    </link>
+    <!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Font Awesome CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+	<!-- Custom CSS -->
+	<link href="css/ecocar.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" width="20%">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="login.html" id="login">Login</a>
+					</li>
+					<li class="nav-item">
+                        <button class="btn btn-danger" onclick="logOut()" id="logout">Log Out</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" id="quiz_questions"> 
+
+        <!-- Page breakdown in taskbar -->
+        <h1 class="mt-4 mb-3">EcoCar Quiz
+      <small>Current car...</small>
+    </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Your requirements...</li>
+        </ol>
+		
+		<form>
+	  <div class="form-group">
+
+		<div class="alert alert-danger" role="alert" id="errormessage">
+			Error! No cars found matching your criteria, please try again.
+		  </div>
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Bringing the div box in proportion with the above -->
+            				
+				<div class="col-lg-6 mb-4">
+					<!-- CO2 Emmissions -->
+					<label for="co2">CO2 Emmissions (g/km)</label>
+					<!-- Bootstrap styling -->
+					<select id="co2" class="form-control form-control-sm">
+					  <option></option>
+					  <option value="0/99">0 - 99g/km</option>
+					  <option value="100/199">100 - 199g/km</option>
+					  <option value="200/299">200 - 299g/km</option>
+					  <option value="300/399">300 - 399g/km</option>
+					</select>
+				</div>
+				
+				<div class="col-lg-6 mb-4">
+					<!-- Fuel Type -->
+					<label for="fuel_type">Fuel Type</label>
+					<!-- Bootstrap styling -->
+					<select id="fuel_type" class="form-control form-control-sm">
+					  <option></option>
+					  <option value="Petrol">Petrol</option>
+					  <option value="Diesel">Diesel</option>
+					  <option value="Electricity">Electric</option>
+					  <option value="Petrol Electric">Petrol Electric</option>
+					  <option value="Petrol Hybrid">Petrol Hybrid</option>
+					</select>
+				</div>
+				
+				<div class="col-lg-6 mb-4">
+					<!-- Range - electric/hybrid only -->
+					<label for="range">Range (miles)</label>
+					<!-- Bootstrap styling -->
+					<select id="range" class="form-control form-control-sm">
+					  <option></option>
+					  <option value="0/99">0 - 99 miles</option>
+					  <option value="100/199">100 - 199 miles</option>
+					  <option value="200/299">200 - 299 miles</option>
+					  <option value="300/399">300 - 399 miles</option>
+					</select>
+				</div>
+				
+				
+				<div class="col-lg-6 mb-4">
+					<!-- Engine Capacity - diesel/petrol only -->
+					<label for="engine_capacity">Engine Capacity (cc) </label>
+					<!-- Bootstrap styling -->
+					<select id="engine_capacity" class="form-control form-control-sm">
+					  <option></option>
+					  <option value="0/999">0 - 999 cc</option>
+					  <option value="1000/1999">1000 - 1999 cc</option>
+					  <option value="2000/2999">2000 - 2999 cc</option>
+					  <option value="3000/3999">3000 - 3999 cc</option>
+					  <option value="4000/4999">4000 - 4999 cc</option>
+					  <option value="5000/5999">5000 - 5999 cc</option>
+					  <option value="6000/6999">6000 - 6999 cc</option>
+					</select>
+				</div>
+				
+				
+				<div class="col-lg-6 mb-4">
+					<!-- Transmission - non electric only -->
+					<label for="transmission">Transmission </label>
+					<!-- Bootstrap styling -->
+					<select id="transmission" class="form-control form-control-sm">
+					  <option></option>
+					  <option value="Automatic">Automatic</option>
+					  <option value="Manual">Manual</option>
+					</select>
+				</div>
+				
+			
+				<div class="col-lg-6 mb-4">
+					<!-- Manufacturer -->
+					<label for="manufacturer">Manufacturer </label>
+					<!-- Bootstrap styling -->
+					<select id="manufacturer" class="form-control form-control-sm">
+					  <option></option>
+					</select>
+				</div>
+				
+				<!-- Button to move onto next page and show recommendation-->
+				<div class="col-sm-12">
+					<button onclick="getRecommendation(event)" class = "btn btn-primary float-right" id="getRec" disabled>Get recommendation!</button>
+				</div>
+        </div>
+        <!-- /.row -->
+					  </div>
+			</form>
+
+    </div>
+	<!-- /.row -->
+	
+	<main role="main" id="quiz_answers">
+
+		<section class="jumbotron text-center">
+		  <div class="container">
+			  <img src="" alt="manufacturer logo" id="manufacturer_logo" width="128px" height="128px">
+			  <h1><b>Your recommended car is a</b></h1>
+			<h1 class="jumbotron-heading" id="manu"></h1>
+			<p class="lead text-muted" id="description"></p>
+			<p>
+			  <a href="#" id="manu-link" target="_blank" class="btn btn-primary my-2">Manufacturer website</a>
+			</p>
+		  </div>
+		</section>
+  
+		<div class="album py-5 bg-light">
+		  <div class="container">
+  
+			<div class="row">
+			  <div class="col-md-4">
+				<div class="card mb-4 box-shadow">
+				  <div class="card-body">
+					<div class="card-title text-center"><b>Your current car</b></div>
+					<table class="table table-striped">
+						<tbody>
+						  <!-- Registration -->
+						  <tr>
+							<th scope="row">Registration</th>
+							<td>
+							  <span id="registration_number"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- CO2 Emissions -->
+						  <tr>
+							<th scope="row">CO2 Emissions</th>
+							<td>
+								<b>
+									<u><span id="co2_figure" style="color:green;"></span></u>
+									<i class="info fa fa-info-circle" title="The lower the CO2 value, the cheaper the car is to insure, tax and run. A car with 105 g/km CO2 can be taxed for £20 whereas a car with 265 g/km CO2 will cost £570 to tax."></i>
+								</b>
+								
+							</td>
+						  </tr>
+						  
+						  <!-- Make  -->
+						  <tr>
+							<th scope="row">Make</th>
+							<td>
+								<span id="make"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- Colour -->
+						  <tr>
+							<th scope="row">Colour</th>
+							<td>
+								<span id="colour"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- Year of Manufacture -->
+						  <tr>
+							<th scope="row">Year of Manufacture</th>
+							<td>
+								<span id="year"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- Fuel Type -->
+						  <tr>
+							<th scope="row">Fuel Type</th>
+							<td>
+								<span id="fuel"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- Engine size -->
+						  <tr>
+							<th scope="row">Engine Capacity</th>
+							<td>
+								<span id="enginesize"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- Axel Type -->
+						  <tr>
+							<th scope="row">Axle Type</th>
+							<td>
+								<span id="axle"> </span>
+							</td>
+						  </tr>
+						  
+						</tbody>
+					  </table>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+				<div class="card mb-4 box-shadow">
+				  <div class="card-body">
+					<div class="card-title text-center"><b>YouTube review</b></div>
+					<iframe id="youtube_video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				  </div>
+				</div>
+			  </div>
+
+			  <div class="col-md-4">
+				<div class="card mb-4 box-shadow">
+				  <div class="card-body">
+					<div class="card-title text-center"><b>Our recommendation</b></div>
+					<table class="table table-striped">
+						<tbody>
+						  <!-- Manufacturer -->
+						  <tr>
+							<th scope="row">Manufacturer</th>
+							<td>
+							  <span id="manufacturers"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- Model -->
+						  <tr>
+							<th scope="row">Model</th>
+							<td>
+								<span id="models"> </span>
+							</td>
+						  </tr> 
+						  
+						  <!-- Engine Capacity  -->
+						  <tr>
+							<th scope="row">Engine Capacity</th>
+							<td>
+								<span id="enginecapacities"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- Fuel Type -->
+						  <tr>
+							<th scope="row">Fuel Type</th>
+							<td>
+								<span id="fueltypes"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- CO2 -->
+						  <tr>
+							<th scope="row">CO2</th>
+							<td>
+								<b>
+									<u><span id="CO2values" style="color:green;"> </span></u>
+									<i class="info fa fa-info-circle" title="The lower the CO2 value, the cheaper the car is to insure, tax and run. A car with 105 g/km CO2 can be taxed for £20 whereas a car with 265 g/km CO2 will cost £570 to tax."></i>
+									</b>
+								
+							</td>
+						  </tr>
+						  
+						  <!-- Fuel Cost -->
+						  <tr>
+							<th scope="row">Fuel cost / 12k miles (£)</th>
+							<td>
+								<span id="fuelcosts"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- Engine Power -->
+						  <tr>
+							<th scope="row">Engine Power</th>
+							<td>
+								<span id="enginespower"> </span>
+							</td>
+						  </tr>
+						  
+						  <!-- EURO rating -->
+						  <tr>
+							<th scope="row">EURO rating</th>
+							<td>
+								<span id="euroratings"> </span>
+							</td>
+						  </tr>
+						  
+						</tbody>
+					  </table>
+				  </div>
+				</div>
+			  </div>
+			  	<!-- Google Maps for finding nearest retailer-->
+			  <div class="col-md-12">
+				<div class="card mb-4 box-shadow">
+				  <div class="card-body">
+					<div class="card-title"> 
+						<div class="row">
+							<div class="col-6">
+								<b>Find my nearest retailer</b>
+							</div>
+							<div class="col-6">
+								<div class="row">
+									<!-- Requesting the postcode or city name from the user -->
+								<label for="postcode" class="col-sm-4 col-form-label"><b>Postcode / City:</b></label>
+								<div class="col-sm-4">
+									<!-- Taking in the postcode or city name for it to be inputted into the API (lifted off Numberplate)-->
+									<input type="text" class="form-control" id="postcode" placeholder="e.g. G4 0BA">
+								</div>
+								<div class="col-sm-4">
+									<!-- Searching the API for the manufacturer and location -->
+									<button id="searchMap" onclick="getMap()" class="btn btn-dark">Search</button>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<!-- Setting the dimensions of the map for easy viewing -->
+					<div class="card-text text-center" id="map">
+						<iframe width="1000" height="450" frameborder="0" style="border:0" id="g_map" allowfullscreen></iframe>
+					</div>
+					<hr>
+					<button class="btn btn-danger" onclick="clearCar()" id="clear_car">Clear Saved Car</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+  
+	  </main>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; EcoCar 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="js/jqBootstrapValidation.js"></script>
+	
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyCFzMt_C89_3368xeO9HI6A6tXvGBO5rJU",
+		authDomain: "ecocar-208.firebaseapp.com",
+		databaseURL: "https://ecocar-208.firebaseio.com",
+		projectId: "ecocar-208",
+		storageBucket: "ecocar-208.appspot.com",
+		messagingSenderId: "1002467843695",
+		appId: "1:1002467843695:web:ff06eb87cbc8a1ce9ab79a"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	</script>
+
+	<!-- Temporary storage of cars whilst database is not set up -->
+	<script src="js/data.js"></script>	
+
+	<script src="js/login.js"></script>	
+
+	<!-- Custom Javascript file -->
+	<script src="js/quiz_more.js"></script>
+
+	<!-- Linking the Youtube API-->
+	<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+
+</body>
+
+</html>
